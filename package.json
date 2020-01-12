@@ -1,0 +1,19 @@
+{
+  "name": "tealorange",
+  "version": "2.0.0",
+  "description": "Teal Orange",
+  "main": "src/app/index.ts",
+  "scripts": {
+    "start": "parcel src/assets/index.html"
+  },
+  "author": "Michel Lopez",
+  "license": "MIT License",
+  "devDependencies": {
+    "stylus": "^0.54.7",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "reset": "^0.1.0",
+    "reset-css": "^5.0.1"
+  }
+}

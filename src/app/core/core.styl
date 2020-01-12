@@ -1,0 +1,46 @@
+
+primary-color = #008080
+secondary-color = #ffa500
+gap = 5px
+
+body
+    font-family Roboto,RobotoDraft,Helvetica,Arial,sans-serif
+    margin 0
+    //background black
+    color white
+    overflow hidden
+
+.primary
+    color primary-color
+
+.secondary
+    color secondary-color
+
+.panel
+    background whitesmoke
+    color #333
+    padding gap 0 0 gap
+    h3
+        font-weight bold
+        margin 0 0 gap
+
+.fields
+    border thin solid #AAA
+    margin 0 gap gap 0
+    padding gap gap 0
+    .field
+        display flex
+        padding 0 0 gap
+        label
+            width: 130px
+
+button
+    border none
+    margin 0 0 gap
+    padding gap
+    
+button.primary
+    background primary-color
+    color white
+    &:hover
+        background secondary-color
