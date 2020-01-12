@@ -7,11 +7,13 @@
     "url": "https://github.com/michel-lopez/tealorange.git"
   },
   "scripts": {
-    "start": "parcel src/assets/index.html"
+    "dev": "parcel src/assets/index.html",
+    "build": "parcel build src/assets/index.html"
   },
   "author": "Michel Lopez",
   "license": "MIT",
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "stylus": "^0.54.7",
     "typescript": "^3.7.4"
   },
