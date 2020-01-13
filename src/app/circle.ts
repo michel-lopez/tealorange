@@ -25,7 +25,7 @@ export default class Circle {
         return `rgba(255, 255, 255, ${alpha})`
     }
 
-    render(context: CanvasRenderingContext2D) {
+    render(context: CanvasRenderingContext2D|OffscreenCanvasRenderingContext2D) {
         const { x, y } = this.position
         context.strokeStyle = this.color()
         context.fillStyle = this.color(100)
