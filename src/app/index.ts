@@ -124,7 +124,7 @@ canvas.addEventListener("touchmove", (e:TouchEvent) => {
     touches.forEach(e => addCircles(location(e.clientX, e.clientY)));
 })
 
-addEventListener("resize", ()=>{
+addEventListener("resize", () => {
     onResize()
     update()
 })
