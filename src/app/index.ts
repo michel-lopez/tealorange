@@ -63,11 +63,31 @@ const update  = () => {
         circle.position.y > top &&
         circle.position.y < bottom
         )
+    circles.forEach(circle => {
+        circle.update()
+    })
 
-
+}
+const render  = () => {
     clear(mainContext, canvas)
-    clear(circlesContext, circlesCanvas)
     
+    mainContext.save()
+
+    const gradient = creatGradient(mainContext, canvas)
+    mainContext.fillStyle = gradient
+    addText(mainContext, canvas)
+
+    renderCircleCanvas()
+    
+    mainContext.drawImage(circlesCanvas, 0, 0)
+    mainContext.strokeStyle = circles.length < 10 ? gradient : "white"
+    addText(mainContext, canvas, true)
+
+    mainContext.restore()
+}
+
+const renderCircleCanvas = () => {
+    clear(circlesContext, circlesCanvas)
     circlesContext.fillStyle = "rgba(255, 255, 255, 0.5)"
     circles.forEach(circle => {
         circle.update()
@@ -83,18 +103,6 @@ const update  = () => {
     circlesContext.globalCompositeOperation = "destination-in"
     circlesContext.drawImage(textCanvas, 0, 0)
     circlesContext.restore()
-
-    mainContext.save()
-
-    
-    const gradient = creatGradient(mainContext, canvas)
-    mainContext.fillStyle = gradient
-    addText(mainContext, canvas)
-    mainContext.drawImage(circlesCanvas, 0, 0)
-    mainContext.strokeStyle = circles.length < 10 ? gradient : "white"
-    addText(mainContext, canvas, true)
-
-    mainContext.restore()
 }
 
 let angle = 0
@@ -131,6 +139,7 @@ addEventListener("resize", () => {
 
 const animate = () => {
     update()
+    render()
     if (circles.length) requestAnimationFrame(animate)
 }
 animate()
