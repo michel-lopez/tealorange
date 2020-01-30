@@ -1,0 +1,42 @@
+body
+    background whitesmoke
+    font-family Roboto
+
+canvas
+    background white
+    margin 10px
+    border thin solid black
+    display block
+
+.panel
+    background white
+    border thin solid black
+    display inline-block
+    margin 10px
+    span.legend
+        box-sizing border-box
+        background #333
+        color white
+        display block
+        padding 5px
+        width 100%
+        
+    ul
+        li
+            display flex
+            padding 5px
+            &:hover
+                background #ccc
+            label
+                box-sizing border-box
+                flex 0 1 140px
+                text-overflow ellipsis
+                white-space nowrap
+                padding-right 2px
+                overflow hidden
+            input
+            select
+                box-sizing border-box
+                width 100px
+                min-width 100px
+                padding 2px

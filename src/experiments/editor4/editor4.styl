@@ -1,0 +1,76 @@
+$project-bg-gradient = linear-gradient(180deg, #ccc 0%, #eee 100%)
+
+body
+    font-family 'Roboto', sans-serif
+    
+body > div
+    position absolute
+    left 0
+    right 0
+    box-sizing border-box
+    &#project
+        display flex
+        justify-content center
+        top 0
+        bottom 400px
+        background $project-bg-gradient
+        > canvas
+            margin auto
+    &#properties
+        display flex
+        padding 10px
+        bottom 0
+        height 400px
+        background #333
+        overflow auto
+        div.panels
+            display flex
+            flex-direction columns 
+            height 100%
+
+div.panel
+    background whitesmoke
+    display flex
+    flex-direction column
+    height 100%
+    min-width 240px
+    margin-right 10px
+    div.preview
+        flex 0 1 140px
+        display flex
+        justify-content center
+        background $project-bg-gradient
+        width 100%
+    .title
+        flex 0 1 auto
+        display block
+        background #555
+        color white
+        padding 5px
+        text-align center
+    div.content
+        flex 1 1 auto
+        overflow auto
+    input
+        &[type = "text"]
+        &[type = "number"]
+            width 140px
+            padding 3px
+    ul
+        padding-top 5px
+        li
+            padding 5px
+            label
+                vertical-align top
+                display inline-block
+                width 100px
+                margin 3px 0
+            &:hover
+                color #333
+                background #ddd
+            fieldset
+                display inline
+            
+.space
+    margin-right 1px
+    line-height 80%      
